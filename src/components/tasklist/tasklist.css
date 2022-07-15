@@ -1,13 +1,13 @@
 .tasklist{
     padding: 8px;
-    background-color: #5797b9;
+    background: transparent;
     border-radius: 2px;
 }
 
 .tasklist .title {
     padding: 4px;
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.418);
     text-align: center;
 }
 
