@@ -1,3 +1,23 @@
+# Aplicação Kanban Board
+
+<h2>O que pode ser feito:</h2>
+<ul>
+    <li>Adicionar tarefas na lista</li>
+    <li>atualizar tarefas já adicionadas</li>
+    <li>deletar tarefas indesejadas</li>
+    <li>mover tarefas entre listas</li>
+</ul>
+
+<h2>O que foi utilizado:</h2>
+<ul>
+    <li>JSX</li>
+    <li>Componentes React</li>
+    <li>Hooks</li>
+    <li>Gerenciamento de Estado</li>
+    <li>State e Props</li>
+    <li>Eventos em React</li>
+</ul>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
