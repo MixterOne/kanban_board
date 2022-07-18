@@ -2,10 +2,12 @@ import React from "react";
 import "./tasklist.css";
 import PropTypes from "prop-types"
 
-const TaskList = ({ title, onAddTask, tasks }) => {
+import TaskItem from "../taskItem/TaskItem";
+
+const TaskList = ({ title, taskState, onAddTask, tasks, onTaskUpdate, onDeleteTask }) => {
 
     const addTask = () => {
-        onAddTask("Nova Tarefa", "Pendente")
+        onAddTask("Nova Tarefa", taskState)
     }
 
     return ( 
@@ -13,9 +15,19 @@ const TaskList = ({ title, onAddTask, tasks }) => {
             <div className="title">{title}</div>
             <div className="content">
                 {tasks.map((task) => {
-                        return <div key={task.id}>{task.title}</div>
+                        return (
+                        <TaskItem 
+                        key={task.id}
+                        id={task.id}
+                        title={task.title} 
+                        taskState={task.state}
+                        onTaskUpdate={onTaskUpdate}
+                        onDeleteTask={onDeleteTask} 
+                        />
+                        )
                     })}
             </div>
+            {tasks.length === 0 && <div className="empty-list">Lista Vazia</div>}
             <button onClick={addTask}>Adicionar Tarefa</button>
         </div>
      );
